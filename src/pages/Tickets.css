@@ -245,3 +245,25 @@
     box-sizing: border-box;
   }
 }
+
+@media (max-width: 1024px) {
+  .customers-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .customers-stats {
+    grid-template-columns: 1fr;
+  }
+  .customers-filter-bar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .search-box {
+    width: 100%;
+  }
+  .status-dropdown {
+    width: 100%;
+  }
+}
