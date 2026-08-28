@@ -1,0 +1,675 @@
+.dashboard-page {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  max-width: 1500px;
+  margin: 0 auto;
+}
+
+/* -------------------------------- */
+/* PAGE HEADING */
+/* -------------------------------- */
+
+.dashboard-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.dashboard-heading h2 {
+  margin: 0;
+  color: #111827;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.dashboard-heading p {
+  margin: 6px 0 0;
+  color: #6b7280;
+  font-size: 13px;
+}
+
+.date-display {
+  text-align: right;
+}
+
+.date-display span {
+  display: block;
+  color: #9ca3af;
+  font-size: 11px;
+  margin-bottom: 4px;
+}
+
+.date-display strong {
+  color: #374151;
+  font-size: 12px;
+}
+
+/* -------------------------------- */
+/* STATISTICS CARDS */
+/* -------------------------------- */
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+}
+
+.dashboard-stat-card {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 2px 5px rgba(15, 23, 42, 0.03);
+}
+
+.stat-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.stat-icon {
+  width: 38px;
+  height: 38px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.stat-icon.purple {
+  background: #eef2ff;
+  color: #4f46e5;
+}
+
+.stat-icon.orange {
+  background: #fff7ed;
+  color: #ea580c;
+}
+
+.stat-icon.green {
+  background: #ecfdf5;
+  color: #059669;
+}
+
+.stat-icon.red {
+  background: #fef2f2;
+  color: #dc2626;
+}
+
+.stat-change {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  font-size: 10px;
+  font-weight: 600;
+}
+
+.stat-change.positive {
+  color: #059669;
+}
+
+.stat-change.warning {
+  color: #ea580c;
+}
+
+.stat-change.danger {
+  color: #dc2626;
+}
+
+.stat-label {
+  margin: 18px 0 4px;
+  color: #6b7280;
+  font-size: 12px;
+}
+
+.dashboard-stat-card h3 {
+  margin: 0;
+  color: #111827;
+  font-size: 25px;
+  font-weight: 700;
+}
+
+.stat-description {
+  display: block;
+  margin-top: 5px;
+  color: #9ca3af;
+  font-size: 10px;
+}
+
+/* -------------------------------- */
+/* TWO COLUMN DASHBOARD */
+/* -------------------------------- */
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.status-card,
+.performance-card {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  padding: 22px;
+  box-shadow: 0 2px 5px rgba(15, 23, 42, 0.03);
+}
+
+.section-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.section-heading h3 {
+  margin: 0;
+  color: #111827;
+  font-size: 15px;
+}
+
+.section-heading p {
+  margin: 5px 0 0;
+  color: #9ca3af;
+  font-size: 11px;
+}
+
+.more-button,
+.row-more-button {
+  border: none;
+  background: transparent;
+  color: #9ca3af;
+  cursor: pointer;
+}
+
+.more-button:hover,
+.row-more-button:hover {
+  color: #4f46e5;
+}
+
+/* -------------------------------- */
+/* TICKET STATUS */
+/* -------------------------------- */
+
+.status-content {
+  display: flex;
+  align-items: center;
+  gap: 45px;
+  margin: 30px 0 22px;
+}
+
+.status-total {
+  min-width: 130px;
+}
+
+.status-total strong {
+  display: block;
+  color: #111827;
+  font-size: 36px;
+  font-weight: 700;
+}
+
+.status-total span {
+  color: #9ca3af;
+  font-size: 11px;
+}
+
+.status-list {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+}
+
+.status-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #4b5563;
+  font-size: 12px;
+}
+
+.status-row span {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.status-row strong {
+  color: #111827;
+}
+
+.status-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.status-dot.open {
+  background: #4f46e5;
+}
+
+.status-dot.pending {
+  background: #f59e0b;
+}
+
+.status-dot.resolved {
+  background: #10b981;
+}
+
+.status-dot.escalated {
+  background: #ef4444;
+}
+
+.progress-bar {
+  height: 8px;
+  width: 100%;
+  background: #f3f4f6;
+  border-radius: 10px;
+  display: flex;
+  overflow: hidden;
+}
+
+.progress-bar span {
+  height: 100%;
+}
+
+.progress-open {
+  width: 25%;
+  background: #4f46e5;
+}
+
+.progress-pending {
+  width: 18%;
+  background: #f59e0b;
+}
+
+.progress-resolved {
+  width: 47%;
+  background: #10b981;
+}
+
+.progress-escalated {
+  width: 10%;
+  background: #ef4444;
+}
+
+/* -------------------------------- */
+/* PERFORMANCE */
+/* -------------------------------- */
+
+.performance-badge {
+  padding: 5px 9px;
+  border-radius: 5px;
+  background: #eef2ff;
+  color: #4f46e5;
+  font-size: 10px;
+  font-weight: 600;
+}
+
+.performance-main {
+  margin-top: 25px;
+}
+
+.performance-main strong {
+  display: block;
+  color: #111827;
+  font-size: 32px;
+}
+
+.performance-main span {
+  color: #9ca3af;
+  font-size: 11px;
+}
+
+.performance-chart {
+  height: 105px;
+  margin-top: 20px;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  padding: 0 10px;
+}
+
+.chart-lines {
+  position: absolute;
+  inset: 0 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.chart-lines span {
+  width: 100%;
+  border-top: 1px dashed #e5e7eb;
+}
+
+.chart-bars {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-around;
+  position: relative;
+  z-index: 2;
+}
+
+.chart-bars div {
+  width: 22px;
+  max-height: 90%;
+  background: #6366f1;
+  border-radius: 4px 4px 0 0;
+  opacity: 0.85;
+}
+
+.chart-bars div:hover {
+  opacity: 1;
+}
+
+.chart-days {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 8px;
+  color: #9ca3af;
+  font-size: 9px;
+}
+
+/* -------------------------------- */
+/* TICKET TABLE */
+/* -------------------------------- */
+
+.tickets-section {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 5px rgba(15, 23, 42, 0.03);
+}
+
+.tickets-header {
+  padding: 22px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #eef0f3;
+}
+
+.tickets-header h3 {
+  margin: 0;
+  color: #111827;
+  font-size: 15px;
+}
+
+.tickets-header p {
+  margin: 5px 0 0;
+  color: #9ca3af;
+  font-size: 11px;
+}
+
+.ticket-filter {
+  padding: 8px 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  background: #ffffff;
+  color: #374151;
+  font-size: 11px;
+  outline: none;
+  cursor: pointer;
+}
+
+.ticket-filter:focus {
+  border-color: #6366f1;
+}
+
+.table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.tickets-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 1000px;
+}
+
+.tickets-table th {
+  background: #f9fafb;
+  color: #6b7280;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+  text-align: left;
+  padding: 12px 18px;
+  border-bottom: 1px solid #eef0f3;
+}
+
+.tickets-table td {
+  padding: 14px 18px;
+  border-bottom: 1px solid #f0f2f5;
+  color: #4b5563;
+  font-size: 11px;
+  white-space: nowrap;
+}
+
+.tickets-table tbody tr:hover {
+  background: #fafbff;
+}
+
+.ticket-id {
+  color: #4f46e5;
+  font-size: 11px;
+}
+
+.customer-cell {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+
+.customer-avatar {
+  width: 30px;
+  height: 30px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: #eef2ff;
+  color: #4f46e5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 9px;
+  font-weight: 700;
+}
+
+.customer-cell strong {
+  display: block;
+  color: #374151;
+  font-size: 11px;
+}
+
+.customer-cell span {
+  display: block;
+  margin-top: 2px;
+  color: #9ca3af;
+  font-size: 9px;
+}
+
+.subject-cell strong {
+  display: block;
+  color: #374151;
+  font-size: 11px;
+}
+
+.subject-cell span {
+  display: block;
+  margin-top: 3px;
+  color: #9ca3af;
+  font-size: 9px;
+}
+
+.priority-badge {
+  display: inline-block;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 9px;
+  font-weight: 700;
+}
+
+.priority-badge.high {
+  background: #fef2f2;
+  color: #dc2626;
+}
+
+.priority-badge.medium {
+  background: #fff7ed;
+  color: #ea580c;
+}
+
+.priority-badge.low {
+  background: #ecfdf5;
+  color: #059669;
+}
+
+.status-select {
+  padding: 5px 8px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  font-size: 9px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.status-select.open {
+  background: #eef2ff;
+  color: #4f46e5;
+}
+
+.status-select.pending {
+  background: #fff7ed;
+  color: #d97706;
+}
+
+.status-select.resolved {
+  background: #ecfdf5;
+  color: #059669;
+}
+
+.status-select.escalated {
+  background: #fef2f2;
+  color: #dc2626;
+}
+
+.created-cell {
+  color: #9ca3af !important;
+  font-size: 10px !important;
+}
+
+.row-more-button {
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.empty-state {
+  padding: 60px 20px;
+  text-align: center;
+  color: #9ca3af;
+}
+
+.empty-state svg {
+  color: #c7d2fe;
+}
+
+.empty-state h4 {
+  margin: 12px 0 5px;
+  color: #374151;
+}
+
+.empty-state p {
+  margin: 0;
+  font-size: 12px;
+}
+
+/* -------------------------------- */
+/* TABLET */
+/* -------------------------------- */
+
+@media (max-width: 1100px) {
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .dashboard-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* -------------------------------- */
+/* MOBILE */
+/* -------------------------------- */
+
+@media (max-width: 768px) {
+  .dashboard-page {
+    gap: 18px;
+  }
+
+  .dashboard-heading {
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .dashboard-heading h2 {
+    font-size: 21px;
+  }
+
+  .date-display {
+    display: none;
+  }
+
+  .stats-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .dashboard-stat-card {
+    padding: 17px;
+  }
+
+  .status-content {
+    gap: 20px;
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .status-total {
+    min-width: auto;
+  }
+
+  .tickets-header {
+    align-items: flex-start;
+    gap: 15px;
+    flex-direction: column;
+  }
+
+  .ticket-filter {
+    width: 100%;
+  }
+}
+
+.metric-card,
+.dashboard-card,
+.tickets-table-card {
+  background-color: var(--bg-card) !important;
+  border: 1px solid var(--border-color) !important;
+  color: var(--text-primary) !important;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+h1, h2, h3, th, td {
+  color: var(--text-primary);
+}
