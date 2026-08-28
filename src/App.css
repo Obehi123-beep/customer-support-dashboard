@@ -56,3 +56,23 @@ body {
   padding: 24px;
   overflow-y: auto;
 }
+
+@media (max-width: 1024px) {
+  .sidebar {
+    width: 80px;
+  }
+}
+
+@media (max-width: 768px) {
+  .app-container {
+    flex-direction: column;
+  }
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+  .main-content {
+    width: 100%;
+  }
+}
