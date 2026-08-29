@@ -117,20 +117,20 @@
   cursor: pointer;
 }
 
-/* Fixed Table Layout */
+/* Responsive Table Container */
 .table-container {
   background-color: var(--bg-card);
   border: 1px solid var(--border-color);
   border-radius: 12px;
-  overflow: hidden;
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
 }
 
 .customers-table {
   width: 100%;
-  min-width: 850px;
   border-collapse: collapse;
   text-align: left;
-  table-layout: fixed;
 }
 
 .customers-table th {
@@ -141,10 +141,11 @@
   color: var(--text-secondary);
   border-bottom: 1px solid var(--border-color);
   background-color: var(--bg-card);
+  white-space: nowrap;
 }
 
 .customers-table td {
-  display: table-cell; /* Overrides global flex resets */
+  display: table-cell !important;
   padding: 14px 16px;
   border-bottom: 1px solid var(--border-color);
   color: var(--text-primary);
@@ -152,41 +153,8 @@
   font-size: 13px;
 }
 
-/* Column Width Ratios */
-
-.customers-table th:nth-child(1),
-.customers-table td:nth-child(1) {
-  width: 20%;
-}
-
-.customers-table th:nth-child(2),
-.customers-table td:nth-child(2) {
-  width: 24%;
-}
-
-.customers-table th:nth-child(3),
-.customers-table td:nth-child(3) {
-  width: 12%;
-}
-
-.customers-table th:nth-child(4),
-.customers-table td:nth-child(4) {
-  width: 12%;
-}
-
-.customers-table th:nth-child(5),
-.customers-table td:nth-child(5) {
-  width: 12%;
-}
-
-.customers-table th:nth-child(6),
-.customers-table td:nth-child(6) {
-  width: 14%;
-}
-
-.customers-table th:nth-child(7),
-.customers-table td:nth-child(7) {
-  width: 6%;
+.customers-table th:last-child,
+.customers-table td:last-child {
   text-align: center;
 }
 
@@ -233,6 +201,7 @@
   gap: 6px;
   color: var(--text-secondary);
   font-size: 12px;
+  word-break: break-all;
 }
 
 .open-badge {
@@ -258,6 +227,7 @@
   border-radius: 20px;
   font-size: 12px;
   font-weight: 600;
+  white-space: nowrap;
 }
 
 .status-pill.active { background-color: #dcfce7; color: #15803d; }
@@ -277,27 +247,7 @@
   background-color: var(--bg-hover);
 }
 
-
-.customers-table td {
-  display: table-cell !important;
-}
-
-.customers-table th, 
-.customers-table td {
-  white-space: nowrap;
-}
-
-/* Fix row vertical centering */
-.customers-table td {
-  vertical-align: middle;
-}
-
-/* Ensure table container takes full width cleanly */
-.table-container {
-  width: 100%;
-  overflow-x: auto;
-}
-
+/* Breakpoints */
 @media (max-width: 1024px) {
   .customers-stats {
     grid-template-columns: repeat(2, 1fr);
