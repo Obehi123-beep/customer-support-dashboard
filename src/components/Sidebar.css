@@ -1,8 +1,5 @@
 .sidebar {
   width: 245px;
-  height: 100vh;
-  position: sticky;
-  top: 0;
   background: #111827;
   color: #ffffff;
   display: flex;
@@ -10,7 +7,6 @@
   padding: 24px 16px;
   box-sizing: border-box;
   flex-shrink: 0;
-  overflow-y: auto;
 }
 
 .sidebar-brand {
