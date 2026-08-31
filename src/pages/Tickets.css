@@ -7,8 +7,10 @@
   display: flex;
   flex-direction: column;
   gap: 24px;
-  min-height: 100vh; /* Changed from fixed height to prevent bottom cutoff */
   width: 100%;
+  flex: 1;               
+  min-height: 0;         
+  overflow: hidden;      
 }
 
 /* Page heading */
