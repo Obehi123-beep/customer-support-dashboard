@@ -41,3 +41,10 @@ textarea {
 button {
   font-family: inherit;
 }
+
+/* TEMPORARY TEST - remove later */
+#root > * {
+  height: 100% !important;
+  max-height: 100dvh !important;
+  overflow: hidden !important;
+}
