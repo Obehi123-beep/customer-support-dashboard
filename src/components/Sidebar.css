@@ -1,6 +1,8 @@
 .sidebar {
   width: 245px;
   height: 100%;
+  min-height: 0;
+
   background: #111827;
   color: #ffffff;
 
@@ -167,9 +169,14 @@
 @media (max-width: 768px) {
   .sidebar {
     width: 100%;
-    min-height: auto;
     height: auto;
+    min-height: 0;
+
+    position: relative;
+
     padding: 14px 16px;
+
+    overflow: visible;
   }
 
   .sidebar-brand {
@@ -179,7 +186,7 @@
   .sidebar-navigation {
     margin-top: 15px;
     flex: none;
-    overflow-y: visible;
+    overflow: visible;
   }
 
   .sidebar-link {
