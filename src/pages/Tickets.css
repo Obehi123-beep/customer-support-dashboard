@@ -95,8 +95,7 @@
 .tickets-table {
   width: 100%;
   border-collapse: collapse;
-  text-align: left;
-  font-size: 14px;
+  min-width: 700px;   
 }
 
 .tickets-table th {

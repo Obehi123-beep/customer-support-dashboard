@@ -426,12 +426,12 @@
 .table-wrapper {
   width: 100%;
   overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
 }
-
 .tickets-table {
   width: 100%;
   border-collapse: collapse;
-  min-width: 1000px;
+  min-width: 700px;
 }
 
 .tickets-table th {
