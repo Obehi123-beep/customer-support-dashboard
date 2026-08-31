@@ -1,8 +1,7 @@
-* Universal reset to prevent padding from causing layout overflow */
-*, *::before, *::after {
+/* Universal reset to prevent padding from causing layout overflow */
+* {
   box-sizing: border-box;
 }
-
 /* Base Page Wrapper */
 .tickets-page {
   display: flex;
