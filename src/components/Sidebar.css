@@ -49,8 +49,8 @@
   flex-direction: column;
   gap: 5px;
   margin-top: 28px;
-  flex: 1;                      /* takes remaining space */
-  overflow-y: auto;             /* scrolls if menu is long */
+  flex: 1;
+  overflow-y: auto;
 }
 
 .menu-label {
@@ -146,18 +146,25 @@
   color: #22c55e;
 }
 
+/* -------------------------------- */
+/* TABLET */
+/* -------------------------------- */
+
 @media (max-width: 1024px) {
   .sidebar {
     width: 220px;
   }
 }
 
+/* -------------------------------- */
+/* MOBILE */
+/* -------------------------------- */
+
 @media (max-width: 768px) {
   .sidebar {
     width: 100%;
+    min-height: auto;
     height: auto;
-    position: relative;
-    min-height: fit-content;
     padding: 14px 16px;
   }
 
@@ -168,6 +175,7 @@
   .sidebar-navigation {
     margin-top: 15px;
     flex: none;
+    overflow-y: visible;
   }
 
   .sidebar-link {
