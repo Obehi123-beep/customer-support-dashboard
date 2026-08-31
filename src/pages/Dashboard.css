@@ -431,7 +431,7 @@
 .tickets-table {
   width: 100%;
   border-collapse: collapse;
-  min-width: 700px;
+  min-width: 0;
 }
 
 .tickets-table th {

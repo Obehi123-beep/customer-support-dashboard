@@ -5,7 +5,6 @@
 }
 
 /* Page heading */
-
 .page-heading {
   display: flex;
   justify-content: space-between;
@@ -36,7 +35,6 @@
 }
 
 /* Search and filters */
-
 .ticket-controls {
   display: flex;
   gap: 12px;
@@ -60,12 +58,12 @@
 }
 
 .ticket-controls input {
-  min-width: 280px;
+  min-width: 220px;
   flex: 1;
 }
 
 .ticket-controls select {
-  min-width: 160px;
+  min-width: 150px;
 }
 
 .ticket-controls input:focus,
@@ -74,7 +72,6 @@
 }
 
 /* Table card */
-
 .tickets-table-card {
   background: #ffffff;
   border: 1px solid #e3e8ee;
@@ -82,8 +79,7 @@
   overflow: hidden;
 }
 
-/* Allows the table to scroll smoothly on smaller screens */
-
+/* Important for tablet / iPad */
 .table-wrapper {
   width: 100%;
   overflow-x: auto;
@@ -91,11 +87,12 @@
 }
 
 /* Tickets table */
-
 .tickets-table {
   width: 100%;
   border-collapse: collapse;
-  min-width: 700px;   
+  text-align: left;
+  font-size: 14px;
+  /* Removed the aggressive min-width that caused horizontal overflow */
 }
 
 .tickets-table th {
@@ -126,12 +123,10 @@
 }
 
 /* Customer information */
-
 .customer-name {
   font-weight: 600;
   color: #17324d;
   margin-bottom: 3px;
-  white-space: nowrap;
 }
 
 .customer-email {
@@ -141,7 +136,6 @@
 }
 
 /* Priority badges */
-
 .priority-badge {
   display: inline-block;
   padding: 5px 9px;
@@ -167,7 +161,6 @@
 }
 
 /* Status badges */
-
 .status-badge {
   display: inline-block;
   padding: 5px 9px;
@@ -198,7 +191,6 @@
 }
 
 /* Status change select */
-
 .status-select {
   border: 1px solid #cfd8e3;
   border-radius: 5px;
@@ -208,7 +200,6 @@
   font-size: 12px;
   outline: none;
   cursor: pointer;
-  white-space: nowrap;
 }
 
 .status-select:focus {
@@ -216,23 +207,43 @@
 }
 
 /* Empty state */
-
 .no-tickets {
   text-align: center;
   padding: 40px !important;
   color: #64748b !important;
 }
 
-/* Tablet */
+/* ====================== */
+/* TABLET / iPad (≤ 1024px) */
+/* ====================== */
+@media (max-width: 1024px) {
+  .page-heading h1 {
+    font-size: 24px;
+  }
 
+  .ticket-controls {
+    padding: 14px;
+  }
+
+  .tickets-table th,
+  .tickets-table td {
+    padding: 12px 14px;
+    font-size: 13px;
+  }
+}
+
+/* ====================== */
+/* MOBILE */
+/* ====================== */
 @media (max-width: 768px) {
   .page-heading {
-    align-items: flex-start;
     flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
   }
 
   .page-heading h1 {
-    font-size: 24px;
+    font-size: 22px;
   }
 
   .ticket-total {
@@ -247,6 +258,11 @@
   .ticket-controls select {
     width: 100%;
     min-width: 0;
-    box-sizing: border-box;
+  }
+
+  .tickets-table th,
+  .tickets-table td {
+    padding: 12px 10px;
+    font-size: 12px;
   }
 }
